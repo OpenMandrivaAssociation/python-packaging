@@ -17,6 +17,8 @@ BuildRequires:	pkgconfig(python2)
 BuildRequires:	python2-six
 BuildRequires:	python-setuptools
 BuildRequires:	pkgconfig(python3)
+%{?python_provide:%python_provide python3-%{pypi_name}}
+Requires:	python-six
 
 %description
 python-packaging provides core utilities for Python
@@ -35,23 +37,12 @@ packages like utilities for dealing with versions,
 specifiers, markers etc.
 
 
-%package -n python-%{pypi_name}
-Summary:	%{summary}
-%{?python_provide:%python_provide python3-%{pypi_name}}
-Group:		Development/Python
-Requires:	python-six
-
-%description -n python-%{pypi_name}
-python3-packaging provides core utilities for Python
-packages like utilities for dealing with versions,
-specifiers, markers etc.
-
-%package -n python-%{pypi_name}-doc
+%package doc
 Summary:	python-packaging documentation
-Recommends:	python-%{pypi_name} = %{version}-%{release}
+Recommends:	%{name} = %{version}-%{release}
 Group:		Development/Python
 
-%description -n python-%{pypi_name}-doc
+%description doc
 Documentation for python-packaging.
 
 %prep
@@ -81,9 +72,9 @@ cd -
 %{python2_sitelib}/%{pypi_name}/
 %{python2_sitelib}/%{pypi_name}-*.egg-info/
 
-%files -n python-%{pypi_name}
+%files
 %{py3_puresitedir}/%{pypi_name}/
 %{py3_puresitedir}/%{pypi_name}-*.egg-info/
 
-%files -n python-%{pypi_name}-doc
+%files doc
 %doc LICENSE LICENSE.APACHE LICENSE.BSD
