@@ -70,6 +70,7 @@ cd -
 
 %files -n python2-%{pypi_name}
 %{python2_sitelib}/%{pypi_name}/
+%{python2_sitelib}/%{pypi_name}-*egg-info
 
 %files
 %{py3_puresitedir}/%{pypi_name}/
