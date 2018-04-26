@@ -5,7 +5,7 @@
 
 Name:		python-%{pypi_name}
 Version:	16.8
-Release:	6
+Release:	7
 Summary:	Core utilities for Python packages
 License:	BSD or ASL 2.0
 Group:		Development/Python
@@ -14,11 +14,15 @@ Source0:	https://files.pythonhosted.org/packages/source/p/%{pypi_name}/%{pypi_na
 BuildArch:	noarch
 BuildRequires:	python2-setuptools
 BuildRequires:	pkgconfig(python2)
+BuildRequires:	python2-parsing
 BuildRequires:	python2-six
 BuildRequires:	python-setuptools
 BuildRequires:	pkgconfig(python3)
+BuildRequires:	python-parsing
+BuildRequires:	python-six
 %{?python_provide:%python_provide python3-%{pypi_name}}
 Requires:	python-six
+Requires:	python-parsing
 
 %description
 python-packaging provides core utilities for Python
