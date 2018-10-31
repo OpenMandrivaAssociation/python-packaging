@@ -5,7 +5,7 @@
 
 Name:		python-%{pypi_name}
 Version:	16.8
-Release:	7
+Release:	8
 Summary:	Core utilities for Python packages
 License:	BSD or ASL 2.0
 Group:		Development/Python
