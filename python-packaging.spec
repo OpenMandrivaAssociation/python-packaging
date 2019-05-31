@@ -4,8 +4,8 @@
 %global python3_wheelname %python2_wheelname
 
 Name:		python-%{pypi_name}
-Version:	16.8
-Release:	8
+Version:	19.0
+Release:	1
 Summary:	Core utilities for Python packages
 License:	BSD or ASL 2.0
 Group:		Development/Python
