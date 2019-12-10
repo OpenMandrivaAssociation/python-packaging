@@ -5,7 +5,7 @@
 
 Name:		python-%{pypi_name}
 Version:	19.2
-Release:	1
+Release:	2
 Summary:	Core utilities for Python packages
 License:	BSD or ASL 2.0
 Group:		Development/Python
