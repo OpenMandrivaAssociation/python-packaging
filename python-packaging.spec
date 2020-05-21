@@ -4,13 +4,13 @@
 %global python3_wheelname %python2_wheelname
 
 Name:		python-%{pypi_name}
-Version:	20.3
+Version:	20.4
 Release:	1
 Summary:	Core utilities for Python packages
 License:	BSD or ASL 2.0
 Group:		Development/Python
 URL:		https://github.com/pypa/packaging
-Source0:	https://files.pythonhosted.org/packages/65/37/83e3f492eb52d771e2820e88105f605335553fe10422cba9d256faeb1702/packaging-20.3.tar.gz
+Source0:	https://files.pythonhosted.org/packages/55/fd/fc1aca9cf51ed2f2c11748fa797370027babd82f87829c7a8e6dbe720145/packaging-20.4.tar.gz
 BuildArch:	noarch
 BuildRequires:	python2-setuptools
 BuildRequires:	pkgconfig(python2)
