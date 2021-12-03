@@ -4,13 +4,13 @@
 %global python3_wheelname %python2_wheelname
 
 Name:		python-%{pypi_name}
-Version:	21.2
+Version:	21.3
 Release:	1
 Summary:	Core utilities for Python packages
 License:	BSD or ASL 2.0
 Group:		Development/Python
 URL:		https://github.com/pypa/packaging
-Source0:	https://files.pythonhosted.org/packages/4d/34/523195b783e799fd401ad4bbc40d787926dd4c61838441df08bf42297792/packaging-21.2.tar.gz
+Source0:	https://files.pythonhosted.org/packages/df/9e/d1a7217f69310c1db8fdf8ab396229f55a699ce34a203691794c5d1cad0c/packaging-21.3.tar.gz
 BuildArch:	noarch
 BuildRequires:	python2-setuptools
 BuildRequires:	pkgconfig(python2)
