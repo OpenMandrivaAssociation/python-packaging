@@ -3,7 +3,7 @@
 
 Name:		python-%{pypi_name}
 Version:	21.3
-Release:	2
+Release:	3
 Summary:	Core utilities for Python packages
 License:	BSD or ASL 2.0
 Group:		Development/Python
