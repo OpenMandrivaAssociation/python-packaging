@@ -1,7 +1,7 @@
 %global pypi_name packaging
 
 Name:		python-%{pypi_name}
-Version:	24.1
+Version:	24.2
 Release:	1
 Summary:	Core utilities for Python packages
 License:	BSD or ASL 2.0
