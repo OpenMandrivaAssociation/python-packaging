@@ -2,19 +2,20 @@
 
 Name:		python-%{pypi_name}
 Version:	24.2
-Release:	1
+Release:	2
 Summary:	Core utilities for Python packages
 License:	BSD or ASL 2.0
 Group:		Development/Python
 URL:		https://github.com/pypa/packaging
 Source0:	https://files.pythonhosted.org/packages/source/p/packaging/%{pypi_name}-%{version}.tar.gz
 BuildArch:	noarch
-BuildRequires:	python-setuptools
-BuildRequires:	pkgconfig(python3)
-BuildRequires:	python-parsing
-BuildRequires:	python-six
-Requires:	python-six
-Requires:	python-parsing
+# Since pip depends on packaging, use the bootstrap version
+BuildRequires:	python-pip-bootstrap
+BuildRequires:	python%{pyver}dist(flit-core)
+# The dependency generator requires a working version of python-packaging,
+# but we can't have a build dependency on ourselves - so let's do its job
+# manually
+Provides:	python%{pyver}dist(packaging) = %{version}
 
 %description
 python-packaging provides core utilities for Python
@@ -44,9 +45,9 @@ rm -rf html/_static/fonts/
 %py_install
 
 %files
-%dir %{py3_puresitedir}/%{pypi_name}
-%{py3_puresitedir}/%{pypi_name}/*
-%{py3_puresitedir}/%{pypi_name}-*-info/
+%dir %{py_puresitedir}/%{pypi_name}
+%{py_puresitedir}/%{pypi_name}/*
+%{py_puresitedir}/%{pypi_name}-*-info/
 
 %files doc
 %doc LICENSE LICENSE.APACHE LICENSE.BSD
