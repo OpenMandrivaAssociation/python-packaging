@@ -1,13 +1,13 @@
 %global pypi_name packaging
 
 Name:		python-%{pypi_name}
-Version:	25.0
+Version:	26.0
 Release:	1
 Summary:	Core utilities for Python packages
 License:	BSD or ASL 2.0
 Group:		Development/Python
 URL:		https://github.com/pypa/packaging
-Source0:	https://files.pythonhosted.org/packages/source/p/packaging/%{pypi_name}-%{version}.tar.gz
+Source0:	https://files.pythonhosted.org/packages/source/p/packaging/%{pypi_name}-%{version}.tar.gz#/%{name}-%{version}.tar.gz
 BuildArch:	noarch
 # Since pip depends on packaging, use the bootstrap version
 BuildRequires:	python-pip-bootstrap
