@@ -1,13 +1,13 @@
-%global pypi_name packaging
+%define module packaging
 
-Name:		python-%{pypi_name}
-Version:	26.0
+Name:		python-packaging
+Version:	26.1
 Release:	1
 Summary:	Core utilities for Python packages
 License:	BSD or ASL 2.0
 Group:		Development/Python
 URL:		https://github.com/pypa/packaging
-Source0:	https://files.pythonhosted.org/packages/source/p/packaging/%{pypi_name}-%{version}.tar.gz#/%{name}-%{version}.tar.gz
+Source0:	https://files.pythonhosted.org/packages/source/p/packaging/%{module}-%{version}.tar.gz#/%{name}-%{version}.tar.gz
 BuildArch:	noarch
 # Since pip depends on packaging, use the bootstrap version
 BuildRequires:	python-pip-bootstrap
@@ -23,7 +23,7 @@ packages like utilities for dealing with versions,
 specifiers, markers etc.
 
 %package doc
-Summary:	python-packaging documentation
+Summary:	Python-packaging documentation
 Recommends:	%{name} = %{EVRD}
 Group:		Development/Python
 
@@ -45,9 +45,8 @@ rm -rf html/_static/fonts/
 %py_install
 
 %files
-%dir %{py_puresitedir}/%{pypi_name}
-%{py_puresitedir}/%{pypi_name}/*
-%{py_puresitedir}/%{pypi_name}-*-info/
+%{py_puresitedir}/%{module}
+%{py_puresitedir}/%{module}-%{version}.dist-info
 
 %files doc
 %doc LICENSE LICENSE.APACHE LICENSE.BSD
