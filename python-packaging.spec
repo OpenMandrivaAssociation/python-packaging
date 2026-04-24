@@ -1,7 +1,7 @@
 %define module packaging
 
 Name:		python-packaging
-Version:	26.1
+Version:	26.2
 Release:	1
 Summary:	Core utilities for Python packages
 License:	BSD or ASL 2.0
