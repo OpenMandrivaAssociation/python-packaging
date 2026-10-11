@@ -2,7 +2,7 @@
 
 Name:		python-packaging
 Version:	26.3
-Release:	1
+Release:	2
 Summary:	Core utilities for Python packages
 License:	BSD or ASL 2.0
 Group:		Development/Python
